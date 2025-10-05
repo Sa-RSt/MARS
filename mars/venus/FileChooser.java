@@ -48,11 +48,7 @@ public interface FileChooser {
    */
   public static FileChooser createForCurrentPlatform(String dirPath) {
     FileChooser fc;
-    if (System.getProperty("os.name").toLowerCase().contains("win")) {
-      fc = new AWTFileChooser(dirPath);
-    } else {
-      fc = new SwingFileChooser(dirPath);
-    }
+    fc = new SwingFileChooser(dirPath);
     return new FileChooserDefaultExtensionDecorator(fc, "mar");
   }
 

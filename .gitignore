@@ -3,3 +3,4 @@
 *.deb
 *.rpm
 wrappers/rust_wrapper/target
+.bin
